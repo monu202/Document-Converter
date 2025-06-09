@@ -1,0 +1,222 @@
+/* Reset and Fonts */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0f29; /* Dark blue for a futuristic look */
+    color: #e0e6ed; /* Light text color for contrast */
+}
+
+/* Full-screen Hero Section */
+.full-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.8s ease-in-out;
+}
+
+/* Shrink the hero section */
+.hero.shrink {
+    height: 150px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e90ff, #0a58ca); /* High-tech gradient */
+    color: #e0e6ed;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background: #0fffc3; /* Neon green */
+    color: #0a0f29;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 0 8px #0fffc3, 0 0 15px #0fffc3;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background: #00d6a3;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: linear-gradient(135deg, #1e90ff, #0056b3); /* Gradient */
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #e0e6ed;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #0fffc3;
+    text-shadow: 0 0 5px #0fffc3;
+}
+
+/* Centering the container */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: linear-gradient(135deg, #0a0f29, #1e283e); /* Futuristic panel */
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    color: #e0e6ed;
+}
+
+/* Logo Styling */
+.logo img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading */
+h1 {
+    font-size: 28px;
+    color: #0fffc3; /* Neon green */
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+input[type="file"],
+select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #1e283e; /* Dark input background */
+    color: #e0e6ed;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styling */
+button {
+    padding: 12px;
+    font-size: 18px;
+    color: #e0e6ed;
+    background: #1e90ff; /* Neon blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 0 8px #1e90ff, 0 0 15px #1e90ff;
+}
+
+button:hover {
+    background: #007bff;
+    transform: scale(1.05);
+}
+
+/* Animation */
+button, input[type="file"], select {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Info Sections */
+.info-section {
+    max-width: 500px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, #0a0f29, #1e283e);
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    color: #e0e6ed;
+}
+
+.info-section h2 {
+    color: #1e90ff; /* Neon blue */
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #1e90ff;
+}
+
+.info-section p {
+    line-height: 1.6;
+}
+
+/* Hide Sections */
+.hidden {
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container, .info-section {
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}

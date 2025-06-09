@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header id="hero" class="hero full-screen">
+        <h1 class="hero-title">Welcome to Document Converter</h1>
+        <p class="hero-subtitle">Fast, Reliable, and Easy Document Conversion</p>
+        <button id="getStartedButton" class="cta-button">Get Started</button>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" data-target="about-us">About Us</a></li>
+            <li><a href="#" data-target="contact-us">Contact Us</a></li>
+            <li><a href="#" data-target="group-members">Group Members</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Your Logo" style="max-width: 70px; height: 100px;">
+        </div>
+        
+        <h1>Document Converter</h1>
+        <form id="converterForm" action="/convert" method="POST" enctype="multipart/form-data">
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file" required>
+            
+            <label for="conversionType">Choose Conversion:</label>
+            <select id="conversionType" name="conversionType" required>
+                <option value="pdf-to-word">PDF to Word</option>
+                <option value="word-to-pdf">Word to PDF</option>
+                <option value="ppt-to-pdf">PowerPoint to PDF</option>
+                <option value="pdf-to-ppt">PDF to PowerPoint</option>
+            </select>
+            
+            <button type="submit">Convert</button>
+        </form>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about-us" class="info-section hidden">
+        <h2>About Us</h2>
+        <p>Welcome to Document Converter, your trusted partner in seamless document conversion. Our mission is to simplify how you manage your documents by offering reliable and user-friendly tools for converting Word to PDF and PDF to Word.</p>
+        <p>Why choose us?</p>
+        <ul>
+            <li>Ease of Use: Intuitive interface designed for everyone.</li>
+            <li>Quality Assurance: Retain formatting and layout accuracy in every conversion.</li>
+            <li>Data Security: Your files are handled with utmost confidentiality.</li>
+            <li>24/7 Accessibility: Convert documents anytime, anywhere.</li>
+        </ul>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contact-us" class="info-section hidden">
+        <h2>Contact Us</h2>
+        <p>We’d Love to Hear from You!</p>
+        <p>Email: kumarujjawal3428@gmail.com</p>
+        <p>Phone: 9027622594 (Mon–Fri, 9 AM–5 PM EST)</p>
+    </div>
+
+    <!-- Group Members Section -->
+    <div id="group-members" class="info-section hidden">
+        <h2>Group Members</h2>
+        <p>Ujjawal Kumar (22BCA101)</p>
+        <p>Supriya Singh (22BCA076)</p>
+        <p>Sabrin Khatoon (22BCA061)</p>
+        <p>Raushan Singh (22BCA032)</p>
+    </div>
+</body>
+</html>
